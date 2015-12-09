@@ -36,4 +36,6 @@ if [[ $(git diff origin/dev) ]]; then
   cd ..
 
   node index.js
+else
+  printf "no changes detected\n"
 fi
