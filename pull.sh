@@ -14,8 +14,11 @@ echo "\nkilling node process"
 killall node
 
 echo "\npulling"
-git pull origin dev
+git fetch origin
 git checkout dev
+if [[ $(git diff origin/dev) ]]; then
+    git rebase origin/dev
+fi
 
 cd database
 mysql -u "root" -p "root" < "./drop_database.sql"
