@@ -25,12 +25,12 @@ fi
 
 cd database
 
-printf "mysql -u \"root\" -p \"root\" < \"./drop_database.sql\"\n"
-mysql -u "root" -p "root" < "./drop_database.sql"
-printf "mysql -u \"root\" -p \"root\" < \"./database_schema.sql\"\n"
-mysql -u "root" -p "root" < "./database_schema.sql"
-printf "mysql -u \"root\" -p \"root\" < \"./test_data_insert.sql\"\n"
-mysql -u "root" -p "root" < "./test_data_insert.sql"
+printf "mysql --user=\"root\" --password=\"root\" < \"./drop_database.sql\"\n"
+mysql --user="root" --password="root" < "./drop_database.sql"
+printf "mysql --user=\"root\" --password=\"root\" < \"./database_schema.sql\"\n"
+mysql --user="root" --password="root" < "./database_schema.sql"
+printf "mysql --user=\"root\" --password=\"root\" < \"./test_data_insert.sql\"\n"
+mysql --user="root" --password="root" < "./test_data_insert.sql"
 
 cd ..
 
