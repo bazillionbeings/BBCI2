@@ -39,3 +39,8 @@ childProcess.exec(__dirname + '/pull.sh ~/BBCentralizedDB', function(err, stdout
         console.log(stdout);
     }
 });
+
+
+setInterval(() => {
+    1+1
+}, 2000);
