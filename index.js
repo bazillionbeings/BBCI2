@@ -34,5 +34,8 @@ childProcess.exec(__dirname + '/pull.sh ~/BBCentralizedDB', function(err, stdout
         console.log('stderr');
         console.error(stderr);
     }
-    if (stdout) console.log(stdout);
+    if (stdout) {
+        console.log('stdout');
+        console.log(stdout);
+    }
 });
