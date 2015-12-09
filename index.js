@@ -1,7 +1,7 @@
 'use strict';
 
 let http = require('http'),
-    spawn = require('child_process').spawn;
+    childProcess = require('child_process');
 
 const PORT = 4333;
 
