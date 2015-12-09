@@ -7,7 +7,7 @@ const PORT = 4333;
 
 function handleRequest(request, res) {
     console.log('pull request');
-    childProcess.exec(__dirname + '/pull.sh ~/BBCentralizedDB', function(err, stdout, stderr) {
+    childProcess.execFile(__dirname + '/pull.sh ~/BBCentralizedDB', function(err, stdout, stderr) {
         console.error(stderr);
         console.log(stdout);
     });
