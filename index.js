@@ -5,7 +5,7 @@ let http = require('http'),
 
 const PORT = 4333;
 
-function handleRequest(request, response) {
+function handleRequest(request, res) {
     console.log('pull request');
     childProcess.exec(__dirname + './pull.sh ~/BBCentralizedDB');
     res.end();
