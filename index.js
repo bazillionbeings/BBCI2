@@ -1,11 +1,15 @@
 'use strict';
 
-let app = require('express')(),
-    shell = require('shelljs');
+let http = require('http'),
+    childProcess = require('child_process');
 
-app.post('/', (req, res) => {
-    shell.exec('./pull.sh ~/BBCentralizedDB');
+const PORT=4333;
+
+function handleRequest(request, response){
+    childProcess.exec(__dirname + './pull.sh ~/BBCentralizedDB');
     res.end();
-});
+}
 
-app.listen(4333);
+let server = http.createServer(handleRequest);
+
+server.listen(PORT);
