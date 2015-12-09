@@ -40,7 +40,6 @@ childProcess.exec(__dirname + '/pull.sh ~/BBCentralizedDB', function(err, stdout
     }
 });
 
-
-setInterval(() => {
-    1+1
-}, 2000);
+process.on('uncaughtException', function(err) {
+    console.log('Caught exception: ' + err);
+});
