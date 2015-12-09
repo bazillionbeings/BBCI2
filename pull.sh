@@ -35,6 +35,9 @@ if [[ $(git diff origin/dev) ]]; then
 
   cd ..
 
+  printf "npm install\n"
+  npm install
+  printf "node index.js\n"
   node index.js
 else
   printf "no changes detected\n"
