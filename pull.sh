@@ -15,6 +15,7 @@ killall node
 
 echo "\npulling"
 git pull origin dev
+git checkout dev
 
 cd database
 mysql -u "root" -p "root" < "./drop_database.sql"
