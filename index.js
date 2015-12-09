@@ -3,9 +3,10 @@
 let http = require('http'),
     childProcess = require('child_process');
 
-const PORT=4333;
+const PORT = 4333;
 
-function handleRequest(request, response){
+function handleRequest(request, response) {
+    console.log('pull request');
     childProcess.exec(__dirname + './pull.sh ~/BBCentralizedDB');
     res.end();
 }
