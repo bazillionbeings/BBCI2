@@ -19,8 +19,6 @@ git fetch origin
 #git checkout dev
 printf "git diff origin/dev\n"
 if [[ $(git diff origin/dev) ]]; then
-  printf "killall node\n"
-  killall node
   printf "git rebase origin/dev\n"
   git rebase origin/dev
 
@@ -37,8 +35,6 @@ if [[ $(git diff origin/dev) ]]; then
 
   printf "npm install\n"
   npm install
-  printf "node index.js\n"
-  node index.js
 else
   printf "no changes detected\n"
 fi
