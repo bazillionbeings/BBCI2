@@ -40,7 +40,7 @@ let server = http.createServer(handleRequest);
 //     }
 // });
 
-childProcess.execFile('./pull.sh', ['~/BBCentralizedDB'], {  
+childProcess.execFile('./pull.sh', ['/home/ubuntu/BBCentralizedDB'], {
 }, function(err, stdout, stderr) {
     if (err) {
         console.log('err');
