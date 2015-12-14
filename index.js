@@ -40,8 +40,7 @@ let server = http.createServer(handleRequest);
 //     }
 // });
 
-childProcess.execFile('pull.sh', ['~/BBCentralizedDB'], {
-    cwd: __dirname + '/'
+childProcess.execFile('./pull.sh', ['~/BBCentralizedDB'], {  
 }, function(err, stdout, stderr) {
     if (err) {
         console.log('err');
