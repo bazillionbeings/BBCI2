@@ -25,7 +25,24 @@ let server = http.createServer(handleRequest);
 
 //server.listen(PORT);
 
-childProcess.exec(__dirname + '/pull.sh ~/BBCentralizedDB', function(err, stdout, stderr) {
+// childProcess.exec(__dirname + '/pull.sh ~/BBCentralizedDB', function(err, stdout, stderr) {
+//     if (err) {
+//         console.log('err');
+//         console.error(err);
+//     }
+//     if (stderr) {
+//         console.log('stderr');
+//         console.error(stderr);
+//     }
+//     if (stdout) {
+//         console.log('stdout');
+//         console.log(stdout);
+//     }
+// });
+
+childProcess.execFile('pull.sh', ['~/BBCentralizedDB'], {
+    cwd: __dirname
+}, function(err, stdout, stderr) {
     if (err) {
         console.log('err');
         console.error(err);
