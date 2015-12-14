@@ -4,7 +4,7 @@
 APP_ADDRESS=$1
 MYSQL_USER="root"
 MYSQL_PASSWORD="root"
-printf("test");
+printf "test"
 if [ "$APP_ADDRESS" = "" ]; then
   printf "Please provide application address as a first argument.\n"
   exit 1
