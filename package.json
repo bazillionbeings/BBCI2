@@ -1,0 +1,22 @@
+{
+  "name": "bbci2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bbci.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bazillionbeings/BBCI2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bazillionbeings/BBCI2/issues"
+  },
+  "homepage": "https://github.com/bazillionbeings/BBCI2#readme",
+  "dependencies": {
+    "shelljs": "^0.5.3"
+  }
+}
